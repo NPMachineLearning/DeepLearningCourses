@@ -1,0 +1,47 @@
+<!--
+教學網站 : https://mahaljsp.ddns.net
+Django 網址變更 : https://mahalpyweb.ddns.net 帳號:lcc, 密碼:lcc0507
+
+VS Code 進入虛擬環境
+1. Ctrl+shift+p : Create Terminal
+2. 進入虛擬環境 : .\.venv\Scripts\activate
+3. 退出虛擬環境 : deactivate
+
+VS Code 自動儲存
+1. File/Auto Save 打勾 (此時預設每 1 秒就儲存一次)
+2. File/Preference/Settings, 點選 Text Editor/Files，AutoSave 改為 onWindowChange，這樣在離開 VS Code 視窗焦點後，才會自動儲存。
+
+總複習
+1. Python/Pycharm/VS Code 安裝及設定
+2. Cuda/Cudnn, Tensorflow, Pytorch
+   Tensorflow : pip install tensorflow==2.10.1
+   Torch : pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 --no-cache-dir
+   若要使用舊版本，則 torch==2.0.1+cu118 : 比如 yolov7, 就只能使用舊版本
+   --no-cache-dir : 有的電腦記憶体太小，安裝第二次就會失敗
+
+Colab 使用方式
+1. Colab 預設配發的 Ram 只有 12 G
+2. 雖說是免費，但約六小時就會自動斷線，升級版是每個月 9.99美金 = 10*30 =300台幣
+3. 速度是 RTX 3080Ti 的 1/4倍
+4. 雲端硬碟最大 15 G
+圖片顯示
+1. 雲端硬碟建立 pictures 資料夾，將圖片拉入pictures內
+2. 載入掛載工具
+    from google.colab import drive
+    drive.mount('/data')
+    pic_path="/data/MyDrive/picture"
+3. cv2.imshow()會讓 colab 當機
+
+使用自訂 sdk
+1. 在雲端硬碟新增sdk 目錄, 將 MahalCv.py copy 到此目錄中
+2.
+    from google.colab import drive
+    drive.mount("/data")
+    pic_path="/data/MyDrive/pictures"
+    sdk_path="/data/MyDrive/sdk"
+    import sys
+    sys.path.append(sdk_path)
+
+學習程式的技巧
+學習查看日誌，自已除錯，才是最快的方法
+-->
