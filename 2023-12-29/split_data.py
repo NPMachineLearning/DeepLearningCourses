@@ -20,23 +20,35 @@ with open("label.txt") as file:
 print(flowers)
 print(flower_array)
 
-source = "./flowers_17"
-train = "./train_images"
-test = "./test_images"
-if os.path.exists(train):
-    shutil.rmtree(train)
-if os.path.exists(test):
-    shutil.rmtree(test)
-os.mkdir(train)
-os.mkdir(test)
+source_dir = "./flowers_17"
+train_dir = "./train_images"
+test_dir = "./test_images"
+if os.path.exists(train_dir):
+    shutil.rmtree(train_dir)
+if os.path.exists(test_dir):
+    shutil.rmtree(test_dir)
+os.mkdir(train_dir)
+os.mkdir(test_dir)
 for flower in flowers:
-    os.mkdir(os.path.join(train, flower))
-    os.mkdir(os.path.join(test, flower))
+    os.mkdir(os.path.join(train_dir, flower))
+    os.mkdir(os.path.join(test_dir, flower))
 
-data = list(zip(os.listdir(source), flower_array))
+data = list(zip(os.listdir(source_dir), flower_array))
 np.random.seed(21)
 np.random.shuffle(data)
-images, labels = zip(*data)
+# print(data)
+train_size = int(len(data)*0.9)
+for file, dir in data[:train_size]:
+    source = os.path.join(source_dir, file)
+    dest = os.path.join(train_dir, dir, file)
+    print(f"copy file {source} -> {dest}")
+    shutil.copy(source, dest)
+for file, dir in data[train_size:]:
+    source = os.path.join(source_dir, file)
+    dest = os.path.join(test_dir, dir, file)
+    print(f"copy file {source} -> {dest}")
+    shutil.copy(source, dest)
+
 
 
 
