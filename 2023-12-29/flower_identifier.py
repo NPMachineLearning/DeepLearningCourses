@@ -28,11 +28,13 @@ for i, file in enumerate(os.listdir(image_dir)):
     x = preprocess_input(x)
     x = np.expand_dims(x, axis=0)
     result = model.predict(x)
-    result = np.argmax(result, axis=1)[0]
-    flower_name = flower_types[result]
+    label_index = np.argmax(result, axis=1)[0]
+    prob = np.round(result[0][label_index] * 100.0, 2)
+    flower_name = flower_types[label_index]
     plt.subplot(5,3,i+1)
     plt.tight_layout()
     plt.imshow(img)
-    plt.title(flower_name)
+    plt.title(label=f"{flower_name} | {prob}%",
+              c="r" if prob < 50.0 else "g")
     plt.axis(False)
 plt.show()
