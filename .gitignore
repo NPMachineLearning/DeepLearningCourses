@@ -1,0 +1,9 @@
+.venv
+.idea
+*.jpg
+*.jpeg
+*.png
+*.csv
+*.pkl
+*.pk1
+*.data-00000-of-00001

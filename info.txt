@@ -1,0 +1,8 @@
+
+深度學習:
+https://mahaljsp.ddns.net
+https://mahalpy.ddns.net
+lcc/lcc0507
+
+pytorch:
+https://download.pytorch.org/whl/torch/

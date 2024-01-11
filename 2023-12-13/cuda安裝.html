@@ -1,0 +1,59 @@
+<!--
+Pycharm 2023.3版的特性
+1. 虛擬環境由原本的 venv 改成 .venv
+2. 此時就可以直接由 vs code 開啟 folder
+
+Pycharm 安裝套件
+1. pip install xxxx, 比如 pip install tensorflow==2.10.1
+2. File/Setting/Project/Python Interpreter/+
+
+Cuda 安裝
+Python => Tensorflow/PyTorch => Cuda => cudnn => GPU
+
+以下只給電腦有 nVidia 顯卡的人操作。沒顯卡的人，無法安裝成功
+1. 先安裝顯卡驅動程式 :　https://www.nvidia.com/zh-tw/geforce/geforce-experience/
+    由 Gforce Express 偵測顯卡型號，再自動安裝驅動程式
+2. 移除舊版的 cuda : 將 NVIDIA CUDA 開頭的程式全移除
+   然後手動將 C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA 刪除
+3. 下載 Cuda : https://developer.nvidia.com/cuda-toolkit-archive，選 11.8版本
+4. 安裝時，一定要把 ASUS TWEAK 或 MSI 的顯卡設定程式關掉
+
+Cudnn安裝
+專門為深度學習計算所設計的軟件庫。裏面包含了許多的計算函數，如卷積等函數。
+1. https://developer.nvidia.com/cudnn Download cuDNN Library
+    以上網址，必需註冊帳號才能下載
+2. 解開後，將 bin/include/lib 三個目錄 copy 到
+    C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8 之下
+
+zlibwapi.dll 錯誤
+    1. 可能是被防毒軟体刪掉了。
+    2. 防毒軟体本身就是病毒，只有白痴的人才會另行安裝
+    3. http://www.winimage.com/zLibDll/zlib123dllx64.zip 下載解開後，將 dll_x64/zlibwapi.dll copy  到
+        c:\Windows\System32之下
+
+colab操作
+1. https://colab.research.google.com/
+2. 新增筆記本
+3. 執行階段/變更執行階段/T4GPU
+
+CPU
+GPU
+TPU : Google 自行研發的晶片，以後可能會裝到手機裏面，那才叫 AI 手機，是 GPU 的閹割版，只留下計算的功能
+A100 : nVidia開發，專門的 AI 晶片
+
+
+
+網路種類
+1. 社區型 : 便宜但很慢，是詐騙型的生意。完全無法架設網站
+   200元/月 * 10戶 = 2000元
+2. 中華ADSL 500M/500M : 999元/月 (目前 100M/40M 999元/月)
+
+Linux:
+Open suse, Red Hat, centos, ubuntu
+ubuntu 是開發 Android 的作業系統, Google 全力支援
+架設 Server, 或桌面系統，都比其它版本穩定
+
+顯卡:
+nVidia : 輝達 : 黃仁勳(台灣) : 軟体綁硬体
+AMD : 超微 : 蘇姿丰(台南人)
+-->
