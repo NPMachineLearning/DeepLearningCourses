@@ -1,0 +1,1 @@
+# a_{t+1}=a_{t}-\frac{Loss'(a,b)}{\vartheta a}*lr

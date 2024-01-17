@@ -7,3 +7,5 @@
 *.pkl
 *.pk1
 *.data-00000-of-00001
+*.pt
+/runs
