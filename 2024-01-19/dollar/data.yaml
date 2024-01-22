@@ -1,0 +1,13 @@
+train: D:/DeepLearningCourses/2024-01-19/dollar/train/images
+val: D:/DeepLearningCourses/2024-01-19/dollar/valid/images
+test: D:/DeepLearningCourses/2024-01-19/dollar/test/images
+
+nc: 12
+names: ['fifty-back', 'fifty-front', 'five-back', 'five-front', 'hundred-back', 'hundred-front', 'one-back', 'one-front', 'ten-back', 'ten-front', 'twenty-back', 'twenty-front']
+
+roboflow:
+  workspace: currency-7mtqe
+  project: dollarbilldetection
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/currency-7mtqe/dollarbilldetection/dataset/3

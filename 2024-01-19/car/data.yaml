@@ -1,0 +1,4 @@
+train: D:/DeepLearningCourses/2024-01-19/car/train/images
+val: D:/DeepLearningCourses/2024-01-19/car/val/images
+nc: 1
+names: ["license"]

@@ -1,0 +1,4 @@
+train: D:/DeepLearningCourses/2024-01-22-2/train/images
+val: D:/DeepLearningCourses/2024-01-22-2/val/images
+nc: 4
+names: ["guava", "lemon", "pitaya", "wax"]

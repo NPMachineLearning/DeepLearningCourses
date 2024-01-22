@@ -24,7 +24,8 @@ while diff > 0.001:
     ax.scatter(x,y,c="g")
     f = np.poly1d(np.polyfit(x,y,1))
     ax.plot(x, f(x), c="b", linewidth=3)
-    da = np.sum((r-y)*x)
+    da = np.sum((r-y)*x) ij
+
     db = np.sum(r-y)
     a = a-da*lr
     b = b-db*lr

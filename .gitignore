@@ -8,4 +8,5 @@
 *.pk1
 *.data-00000-of-00001
 *.pt
+*.xml
 /runs
