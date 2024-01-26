@@ -21,7 +21,7 @@ class PictureThread(QThread):
         while index < total and self.runFlag:
             pix = QPixmap(files[index])
             pix = pix.scaled(400, 300)
-            pix.tag = file[index]
+            pix.tag = files[index]
             self.callback.emit(pix)
             index += 1
             QThread.msleep(10)
