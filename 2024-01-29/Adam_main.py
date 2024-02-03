@@ -18,11 +18,11 @@ init_b = -9
 ax[1].scatter(init_a, init_b, c="g")
 lr = 1
 batch_size = 32
-beta1 = 0.7
-beta2 = 0.9
+beta1 = 0.9
+beta2 = 0.999
 gd = Adam(init_a, init_b, x, y, lr, batch_size, beta1, beta2)
 for epoch in range(epochs):
-    gd.update()
+    gd.update(epoch+1)
     ax[0].clear()
     ax[0].set_xlim(-5, 5)
     ax[0].set_ylim(-30, 30)
